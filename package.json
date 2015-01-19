@@ -1,0 +1,11 @@
+{
+  "name": "material-design-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A syntax theme based off the beautiful colors of Android's Material Design color pallete!",
+  "repository": "https://github.com/atom/material-design-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
