@@ -110,6 +110,14 @@
 .storage {
   color: @blue;
 
+  &.todo,
+  &.fixme,
+  &.changed,
+  &.idea,
+  &.xxx {
+    color: @pink;
+  }
+
   // var of var a = b;
   &.modifier {
     color: @blue;
