@@ -1,3 +1,6 @@
+## 1.5.1
+- updated editor calls
+
 ## 1.5.0
 - updated todo-language support for "hack"
 
