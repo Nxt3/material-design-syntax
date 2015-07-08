@@ -1,3 +1,6 @@
+## 1.6.1
+- updated getStyleSheetsPath
+
 ## 1.6
 - updated editor calls
 
