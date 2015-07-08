@@ -1,3 +1,6 @@
+##1.7.0
+- updated getStyleSheetsPath (duplicate)
+
 ## 1.6.1
 - updated getStyleSheetsPath
 
