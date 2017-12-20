@@ -5,19 +5,20 @@
         }
 
         &.syntax--property-name {
-            color: @teal;
+            color: @white;
         }
     }
 
     .syntax--keyword {
         &.syntax--unit {
-            color: @pink;
+            color: @teal;
+            font-weight: bold;
         }
     }
 
     .syntax--constant {
         &.syntax--numeric {
-            color: @red;
+            color: @white;
         }
 
         &.syntax--color {
@@ -35,7 +36,7 @@
         }
 
         &.syntax--id {
-            color: @purple;
+            color: @white;
         }
     }
 
@@ -46,6 +47,10 @@
             + .syntax--constant.syntax--numeric:not(.syntax--color) {
                 color: @yellow;
             }
+        }
+
+        &.syntax--definition.keyword {
+            color: @light-purple;
         }
     }
 }
