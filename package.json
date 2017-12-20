@@ -2,7 +2,7 @@
   "name": "material-design-syntax",
   "theme": "syntax",
   "version": "1.8.0",
-  "description": "A syntax theme based off the beautiful colors of Android's Material Design color pallete!",
+  "description": "A syntax theme based off the beautiful colors of Android's Material Design color palette!",
   "repository": "https://github.com/Nxt3/material-design-syntax",
   "license": "MIT",
   "engines": {
