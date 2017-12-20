@@ -1,42 +1,60 @@
 .syntax--json {
-    .syntax--meta {
-        &.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double {
-            color: @green;
+  @quoted-color: @light-blue-gray;
 
-            > * {
-                color: currentColor;
+  .syntax--meta {
+    &.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double {
+      color: @red;
 
-                &.syntax--punctuation {
-                    &.syntax--begin,
-                    &.syntax--end {
-                        color: @white;
-                    }
-                }
-            }
+      > * {
+        color: currentColor;
+
+        &.syntax--punctuation {
+          &.syntax--begin,
+          &.syntax--end {
+            color: @quoted-color;
+          }
         }
-
-        .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted {
-            color: @green;
-
-            * {
-                color: currentColor;
-
-                &.syntax--punctuation {
-                    &.syntax--begin,
-                    &.syntax--end {
-                        color: @white;
-                    }
-                }
-            }
-        }
-
-        &.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted {
-            color: @light-purple;
-            font-weight: bold;
-
-            .syntax--punctuation.syntax--string {
-                color: currentColor;
-            }
-        }
+      }
     }
+
+    .syntax--structure {
+      &.syntax--dictionary {
+        //necessary to fix softwrapping values in a dictionary not being colored properly
+        & > .syntax--value > .syntax--string.syntax--quoted {
+          color: @blue;
+
+          //colors quotes for a dictionary's value
+          .syntax--definition.syntax--string.syntax--begin,
+          .syntax--definition.syntax--string.syntax--end {
+            color: @quoted-color;
+          }
+        }
+
+        .syntax--string.syntax--quoted {
+          color: @yellow;
+          font-weight: bold;
+
+          .syntax--punctuation.syntax--string {
+            color: currentColor;
+          }
+        }
+      }
+    }
+
+    .syntax--punctuation {
+      &.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted {
+        color: @blue;
+
+        * {
+          color: @quoted-color;
+        }
+      }
+    }
+  }
+
+  .syntax--constant {
+    &.syntax--language {
+      color: @white;
+    }
+  }
 }
