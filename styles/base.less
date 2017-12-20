@@ -17,17 +17,20 @@ atom-text-editor {
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
+    background-color: @syntax-gutter-background-color;
 
     .line-number {
       &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
         color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+        font-weight: bold;
       }
 
+      //line number when a line is in focus
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
+        font-weight: bold;
       }
     }
   }
