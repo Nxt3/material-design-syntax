@@ -1,3 +1,8 @@
+## 2.3
+
+* Tweaked coloring of gutter text and background
+* Bold gutter text when line is in focus or a selection is highlighted
+
 ## 2.2
 
 * Fixed issue with JSON key-value pairs not showing the proper highligting on a value when that value soft-wraps in the editor
