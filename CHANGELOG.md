@@ -1,3 +1,8 @@
+#2.1
+
+* Made adjustments for typescript syntax
+* Remove gray background from separators (instead, it's now bolded)
+
 ## 2.0
 
 * Fixed deprecated calls for setting syntax styles
