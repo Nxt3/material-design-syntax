@@ -1,4 +1,10 @@
-#2.1
+## 2.2
+
+* Fixed issue with JSON key-value pairs not showing the proper highligting on a value when that value soft-wraps in the editor
+* Changed array highlight to cyan
+* Added null highlighting to orange
+
+## 2.1
 
 * Made adjustments for typescript syntax
 * Remove gray background from separators (instead, it's now bolded)
