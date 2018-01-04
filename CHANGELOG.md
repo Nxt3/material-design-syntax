@@ -1,7 +1,12 @@
+## 2.5
+
+* Underline `language-todo` instead of italicizing it
+
 ## 2.4
 
 * Added back support for `language-todo` syntax (now italicized!)
 * Tweaked appearance of search results highlight region
+* Added a subtle roundness (adjusted `border-radius`) for all selection regions
 
 ## 2.3
 
