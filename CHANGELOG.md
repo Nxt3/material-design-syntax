@@ -1,3 +1,8 @@
+## 2.4
+
+* Added back support for `language-todo` syntax (now italicized!)
+* Tweaked appearance of search results highlight region
+
 ## 2.3
 
 * Tweaked coloring of gutter text and background
