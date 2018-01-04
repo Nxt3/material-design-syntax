@@ -49,25 +49,30 @@ atom-text-editor {
     color: @syntax-cursor-color;
   }
 
-  .selection .region {
-    background-color: @syntax-selection-color;
+  .bracket-matcher .region {
+    background: fade(@blue, 50%);
+    border-radius: @roundness;
   }
-}
 
-//Active line color
-.line.cursor-line {
-  background: fade(white, 7%) !important;
-  // padding-left: 10px;
-  // margin-left: -10px;
-}
+  .selection .region {
+    background-color: @syntax-selection-color !important;
+    border-radius: @roundness;
+  }
 
-atom-text-editor .search-results .syntax--marker .region {
-  background-color: transparent;
-  border: 1px solid @syntax-result-marker-color;
-}
+  //Active line color
+  .line.cursor-line {
+    background: fade(@white, 7%) !important;
+  }
 
-atom-text-editor .search-results .syntax--marker.current-result .region {
-  border: 1px solid @syntax-result-marker-color-selected;
+  //Search results
+  .find-result .region {
+    border-radius: @roundness;
+  }
+
+  .current-result .region {
+    border: 1px solid @white;
+    border-radius: @roundness;
+  }
 }
 
 /* Syntax styles */
@@ -109,13 +114,25 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 .syntax--storage {
   color: @blue;
 
-  &.syntax--todo,
-  &.syntax--fixme,
-  &.syntax--changed,
-  &.syntax--idea,
-  &.syntax--xxx,
-  &.syntax--hack {
-    color: @pink;
+  &.syntax--storage {
+    &.syntax--todo,
+    &.syntax--fixme,
+    &.syntax--changed,
+    &.syntax--xxx,
+    &.syntax--idea,
+    &.syntax--hack,
+    &.syntax--note,
+    &.syntax--review,
+    &.syntax--nb,
+    &.syntax--bug,
+    &.syntax--question,
+    &.syntax--combak,
+    &.syntax--temp,
+    &.syntax--debug,
+    &.syntax--optimize {
+      color: @pink;
+      font-style: italic;
+    }
   }
 
   // var of var a = b;
@@ -170,7 +187,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
   &.syntax--variable {
     &.syntax--object {
-      color: @light-purple;
+      color: @indigo;
     }
   }
 }
@@ -370,18 +387,5 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
   &.syntax--heading {
     color: @green;
-  }
-}
-
-atom-text-editor[mini] .scroll-view,
-.scroll-view {
-  padding-left: 1px;
-}
-
-atom-text-editor {
-  .highlight .region.bracket-matcher {
-    background: fade(@blue, 55%);
-    border-radius: 0rem; //rounded corners
-    // box-shadow: 0 0 0 .01rem fade(@white, 60%);
   }
 }
