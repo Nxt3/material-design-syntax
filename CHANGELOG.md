@@ -1,3 +1,7 @@
+## 2.6
+
+* Fixed deprecated calls in `css.less`
+
 ## 2.5
 
 * Underline `language-todo` instead of italicizing it
