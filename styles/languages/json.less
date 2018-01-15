@@ -1,5 +1,6 @@
 .syntax--json {
   @quoted-color: @light-blue-gray;
+  @value-color: @blue;
 
   .syntax--meta {
     &.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double {
@@ -17,11 +18,12 @@
       }
     }
 
-    .syntax--structure {
+    &.syntax--structure {
       &.syntax--dictionary {
         //necessary to fix softwrapping values in a dictionary not being colored properly
-        & > .syntax--value > .syntax--string.syntax--quoted {
-          color: @blue;
+        & > .syntax--value > .syntax--string.syntax--quoted,
+        & > .syntax--value > .syntax--string.syntax--quoted > .syntax--punctuation {
+          color: @value-color;
 
           //colors quotes for a dictionary's value
           .syntax--definition.syntax--string.syntax--begin,
@@ -33,17 +35,13 @@
         .syntax--string.syntax--quoted {
           color: @yellow;
           font-weight: bold;
-
-          .syntax--punctuation.syntax--string {
-            color: currentColor;
-          }
         }
       }
     }
 
     .syntax--punctuation {
       &.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted {
-        color: @blue;
+        color: @value-color;
 
         * {
           color: @quoted-color;
