@@ -20,9 +20,19 @@
 
     &.syntax--structure {
       &.syntax--dictionary {
+        //TODO, color the key/key quotes differently?
+        // .syntax--key > .syntax--string {
+        //   color: @yellow;
+        //
+        //   .syntax--punctuation.syntax--definition.syntax--string.syntax--begin,
+        //   .syntax--punctuation.syntax--definition.syntax--string.syntax--end {
+        //     color: currentColor;
+        //   }
+        // }
+
         //necessary to fix softwrapping values in a dictionary not being colored properly
         & > .syntax--value > .syntax--string.syntax--quoted,
-        & > .syntax--value > .syntax--string.syntax--quoted > .syntax--punctuation {
+        & > .syntax--value > .syntax--string.syntax--quoted {
           color: @value-color;
 
           //colors quotes for a dictionary's value
@@ -32,9 +42,8 @@
           }
         }
 
-        .syntax--string.syntax--quoted {
-          color: @yellow;
-          font-weight: bold;
+        .syntax--constant.syntax--numeric {
+          color: @value-color;
         }
       }
     }

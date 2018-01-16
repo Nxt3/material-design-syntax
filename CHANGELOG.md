@@ -1,3 +1,9 @@
+## 2.7
+
+* Fixed issue where quotations and text colors were incorrect in a JSON dictionary struture
+* Links are now underlined and colored white
+* Slight adjustments to JSON syntax highlighting
+
 ## 2.6
 
 * Fixed deprecated calls in `css.less`
