@@ -1,5 +1,21 @@
 .syntax--js,
 .syntax--ts {
+  .syntax--storage {
+    &.syntax--type {
+      color: @blue;
+
+      &.syntax--class,
+      &.syntax--interface {
+        color: @light-blue-gray;
+        font-weight: bold;
+      }
+
+      &.syntax--primitive {
+        color: @red;
+      }
+    }
+  }
+
   .syntax--variable {
     &.syntax--other.syntax--readwrite.syntax--alias {
       color: @blue;

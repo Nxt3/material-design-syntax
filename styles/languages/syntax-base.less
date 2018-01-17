@@ -2,17 +2,6 @@
   color: @blue-gray;
 }
 
-.syntax--entity {
-  &.syntax--name.syntax--type {
-    color: @white;
-    font-weight: bold;
-  }
-
-  &.syntax--other.syntax--inherited-class {
-    color: @white;
-  }
-}
-
 .syntax--keyword {
   color: @purple;
 
@@ -22,6 +11,10 @@
 
   &.syntax--operator {
     color: @green;
+
+    &.syntax--type.syntax--annotation {
+      color: @light-blue-gray;
+    }
   }
 
   &.syntax--other.syntax--special-method {
@@ -65,6 +58,10 @@
   &.syntax--type {
     color: @light-blue-gray;
     font-weight: bold;
+
+    &.syntax--primitive {
+      color: @red;
+    }
   }
 }
 
@@ -93,7 +90,7 @@
 }
 
 .syntax--variable {
-  color: @red;
+  color: @white;
 
   &.syntax--interpolation {
     color: darken(@red, 10%);
@@ -107,16 +104,9 @@
     color: @pink;
   }
 
-  &.syntax--variable {
-    &.syntax--object {
-      color: @indigo;
-    }
+  &.syntax--object {
+    color: @purple;
   }
-}
-
-.syntax--invalid.syntax--illegal {
-  background-color: @red;
-  color: @syntax-background-color;
 }
 
 .syntax--string {
@@ -185,6 +175,12 @@
     color: @orange;
   }
 
+  &.syntax--type {
+    &.syntax--primitive {
+      color: @red;
+    }
+  }
+
   &.syntax--function {
     color: @cyan;
 
@@ -200,10 +196,25 @@
     font-weight: bold;
   }
 
-  &.syntax--name.syntax--class,
-  &.syntax--name.syntax--type.syntax--class {
-    color: @white;
+  &.syntax--name.syntax--type {
+    color: @red;
     font-weight: bold;
+  }
+
+  &.syntax--name {
+    .syntax--class,
+    .syntax--interface,
+    &.syntax--type {
+      &.syntax--class,
+      &.syntax--interface {
+        color: @white;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @white;
   }
 
   &.syntax--name.syntax--section {
@@ -260,10 +271,6 @@
   }
 }
 
-.syntax--none {
-  color: @syntax-text-color;
-}
-
 .syntax--markup {
   &.syntax--bold {
     color: @yellow;
@@ -311,4 +318,13 @@
   &.syntax--heading {
     color: @green;
   }
+}
+
+.syntax--none {
+  color: @syntax-text-color;
+}
+
+.syntax--invalid.syntax--illegal {
+  background-color: @red;
+  color: @syntax-background-color;
 }
