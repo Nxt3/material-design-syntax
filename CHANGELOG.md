@@ -1,3 +1,12 @@
+## 3.0
+
+* Swapped around variable and entity.name.type around; there will be less red and more white because of this change
+* Use purple instead of indigo for variable.object
+* Color interface and classes the same
+* Change semicolon color to light-blue-gray instead of green
+* Colored template-expressions cyan
+* Colored some things to account for these changes
+
 ## 2.7
 
 * Fixed issue where quotations and text colors were incorrect in a JSON dictionary struture
