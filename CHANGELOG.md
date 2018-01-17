@@ -1,3 +1,10 @@
+## 3.1
+
+* Fixed coloring of types to be red
+* Revert change to purple for variable.object (it's now indigo)
+* Color annotations light-blue-gray
+* Updated README with new screenshot
+
 ## 3.0
 
 * Swapped around variable and entity.name.type around; there will be less red and more white because of this change
