@@ -1,3 +1,7 @@
+## 3.1.1
+
+* Color object-literal.key to be red
+
 ## 3.1
 
 * Fixed coloring of types to be red
