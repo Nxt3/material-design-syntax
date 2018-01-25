@@ -8,6 +8,25 @@
       &.syntax--interface {
         color: @light-blue-gray;
         font-weight: bold;
+
+        &.syntax--todo,
+        &.syntax--fixme,
+        &.syntax--changed,
+        &.syntax--xxx,
+        &.syntax--idea,
+        &.syntax--hack,
+        &.syntax--note,
+        &.syntax--review,
+        &.syntax--nb,
+        &.syntax--bug,
+        &.syntax--question,
+        &.syntax--combak,
+        &.syntax--temp,
+        &.syntax--debug,
+        &.syntax--optimize {
+          color: @pink;
+          text-decoration: underline;
+        }
       }
 
       &.syntax--primitive {

@@ -1,3 +1,7 @@
+## 3.1.2
+
+* Fixed color not being set properly for TODO comments in Typescript
+
 ## 3.1.1
 
 * Color object-literal.key to be red

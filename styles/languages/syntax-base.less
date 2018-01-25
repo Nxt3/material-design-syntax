@@ -29,27 +29,6 @@
 .syntax--storage {
   color: @blue;
 
-  &.syntax--storage {
-    &.syntax--todo,
-    &.syntax--fixme,
-    &.syntax--changed,
-    &.syntax--xxx,
-    &.syntax--idea,
-    &.syntax--hack,
-    &.syntax--note,
-    &.syntax--review,
-    &.syntax--nb,
-    &.syntax--bug,
-    &.syntax--question,
-    &.syntax--combak,
-    &.syntax--temp,
-    &.syntax--debug,
-    &.syntax--optimize {
-      color: @pink;
-      text-decoration: underline;
-    }
-  }
-
   // var of var a = b;
   &.syntax--modifier {
     color: @blue;
@@ -58,6 +37,27 @@
   &.syntax--type {
     color: @red;
     font-weight: bold;
+
+    &.syntax--class {
+      &.syntax--todo,
+      &.syntax--fixme,
+      &.syntax--changed,
+      &.syntax--xxx,
+      &.syntax--idea,
+      &.syntax--hack,
+      &.syntax--note,
+      &.syntax--review,
+      &.syntax--nb,
+      &.syntax--bug,
+      &.syntax--question,
+      &.syntax--combak,
+      &.syntax--temp,
+      &.syntax--debug,
+      &.syntax--optimize {
+        color: @pink;
+        text-decoration: underline;
+      }
+    }
 
     &.syntax--primitive {
       color: @red;
